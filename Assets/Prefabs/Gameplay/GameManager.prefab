@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1293427334539908554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054448733256864263}
+  - component: {fileID: 7176217125988856969}
+  - component: {fileID: 141500900528352197}
+  - component: {fileID: 6939890229007532053}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2054448733256864263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293427334539908554}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6848571, y: -5.616415, z: 22.394928}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7176217125988856969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293427334539908554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8da3dae8f592444aab53273a3f391a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nav: {fileID: 0}
+  player1alive: 0
+  player2alive: 0
+  player3alive: 0
+  twoPlayers: {fileID: 0}
+  threePlayers: {fileID: 0}
+  UIPlayerSelect: {fileID: 0}
+  UIPlayerHP: {fileID: 0}
+  UIGameOver: {fileID: 0}
+  player1obj: {fileID: 0}
+  player2obj: {fileID: 0}
+  player3obj: {fileID: 0}
+  player1Won: {fileID: 0}
+  player2Won: {fileID: 0}
+  player3Won: {fileID: 0}
+  player3UIs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  gameplayMusic: {fileID: 8300000, guid: e20fd0f6abe941d4fa6e3d8a18f42b0d, type: 3}
+  playerselectionClick: {fileID: 8300000, guid: 5098db15b99b5674b8ce840d6cf893e5, type: 3}
+  buttonClick: {fileID: 8300000, guid: 9cef15bfbbd34114a83a931505b4e9b5, type: 3}
+  p1Dead: {fileID: 8300000, guid: c2231561448ce4a46ac8d509b1e08189, type: 3}
+  p2Dead: {fileID: 8300000, guid: cdab2742b8695f446809d77ebe98a351, type: 3}
+  p3Dead: {fileID: 8300000, guid: 387559270840cbb4db5d7606a0138d3a, type: 3}
+  hpBar2: {fileID: 0}
+  weaponDurability2: {fileID: 0}
+  item2: {fileID: 0}
+  player1deadText: {fileID: 0}
+  player2deadText: {fileID: 0}
+  player3deadText: {fileID: 0}
+  tutorialPage: {fileID: 0}
+  _2players: 0
+  _3players: 0
+  defPlayerAtk: 0
+  defPlayerAtkSpd: 1
+  defPlayerRange: 2
+  defPlayerAtkWidth: 10
+  defPlayerKnockback: 2
+  defSpeed: 4.5
+  defAcc: 11
+  canBeHit: 1
+--- !u!114 &141500900528352197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293427334539908554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ed7218daf49fa42a1fc4a956590278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 9cef15bfbbd34114a83a931505b4e9b5, type: 3}
+--- !u!114 &6939890229007532053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293427334539908554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ed7218daf49fa42a1fc4a956590278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 9cef15bfbbd34114a83a931505b4e9b5, type: 3}

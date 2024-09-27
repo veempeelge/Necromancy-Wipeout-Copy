@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - RollPin
+  - MeatHam
+  - BSpoon
+  - Book
+  - Trap
+  - Water
+  - EnemyBarrierFat
+  - Watergencollider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Enemy
+  - Water
+  - UI
+  - Player
+  - Walls
+  - EnemyBarrierFat
+  - Watergen
+  - PostProcessing
+  - Wallsz
+  - Ignorre navnesh
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

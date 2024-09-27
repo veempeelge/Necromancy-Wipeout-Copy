@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: a0a97c50eb4c8f94792ec6b6a5e525c2
+  - enabled: 1
+    path: Assets/Scenes/LevelPicker.unity
+    guid: 1130ad1a772d3644bb801a9432ea792f
+  - enabled: 0
+    path: Assets/Scenes/tutorial.unity
+    guid: db5b05b3d17361d4ea6ada1756398ed0
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 2.unity
+    guid: 3a58f845f47cb80428cb7e84b1aded63
+  - enabled: 1
+    path: Assets/Scenes/Result.unity
+    guid: 607a395f4f2a7b3439870133f2770d30
+  - enabled: 0
+    path: Assets/Scenes/Unused Levels/PRO1.6_TestLvl.1.unity
+    guid: 1cd9dc1f0ba975b4d86c0acdc9bac7d2
+  - enabled: 0
+    path: Assets/Scenes/Unused Levels/PRO2.2_TestLvl.2.unity
+    guid: e49520738184420438283a8a28435c15
+  - enabled: 0
+    path: Assets/Scenes/Unused Levels/PRO3.2_TestLvl.3.unity
+    guid: 3faba6d58a45cdf4d99dbdceb218f0eb
+  - enabled: 0
+    path: Assets/Scenes/Unused Levels/PRO1.7.POLISHING_LVL1.unity
+    guid: f6d493c27d7a3d44f975d5393b7c3fb0
+  - enabled: 0
+    path: Assets/Scenes/Unused Levels/PRO2.2.POLISHING_LVL2.unity
+    guid: f13920b494f540d449d7a8f38a675b92
+  - enabled: 0
+    path: Assets/Scenes/Unused Levels/PRO3.2.POLISHING_LVL3.unity
+    guid: 2a3e9d10f4cd774448e5b32a378c5c91
+  - enabled: 1
+    path: Assets/Scenes/PRO1.8.POLISHING_LVL1.unity
+    guid: 430f6783c08ccba45ac730bc8eef63f8
+  - enabled: 1
+    path: Assets/Scenes/PRO2.3.POLISHING_LVL2.unity
+    guid: a60887f7ae215194280160f4f7b81751
+  - enabled: 1
+    path: Assets/Scenes/PRO3.3.POLISHING_LVL3.unity
+    guid: 95b6de93693a58d44bfe6ef4bdab908f
+  m_configObjects: {}
