@@ -33,6 +33,8 @@ public class MainMenu : MonoBehaviour
         SoundManager.Instance.Play(buttonClick);
 
         SceneManager.LoadScene("Main Menu");
+
+        Debug.Log("ButtonClicked");
     }
 
     public void Credits()
