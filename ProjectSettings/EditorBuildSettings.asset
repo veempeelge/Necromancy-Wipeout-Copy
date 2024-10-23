@@ -44,9 +44,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Old Assets/Scenes/PRO1.8.POLISHING_LVL1.unity
     guid: 430f6783c08ccba45ac730bc8eef63f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Old Assets/Scenes/PRO2.3.POLISHING_LVL2.unity
     guid: a60887f7ae215194280160f4f7b81751
+  - enabled: 1
+    path: Assets/New Assets/Level 2 New Environment.unity
+    guid: a7cf819005917b84bb313d6db671ee1a
   - enabled: 1
     path: Assets/Old Assets/Scenes/PRO3.3.POLISHING_LVL3.unity
     guid: 95b6de93693a58d44bfe6ef4bdab908f

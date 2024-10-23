@@ -41,6 +41,8 @@ public class TutorialSceneManager : MonoBehaviour
 
     [SerializeField] GameObject _3players1, _3players2, _2players1, _2players2, _3players, _2players;
     [SerializeField] GameObject _phase3_2, _phase3_1, textPhase3;
+    [SerializeField] Button part1_2, part1_3;
+    [SerializeField] GameObject allButtons;
 
     private bool haventgolevel = true;
     private bool phase2paused = false;
@@ -57,12 +59,16 @@ public class TutorialSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        allButtons.SetActive(false);
         tutorialScreen.SetActive(false);
 
        // next.onClick.AddListener(Next);
         tutorialScreen2.SetActive(false);
         tutorialScreen3.SetActive(false);
         tutorialScreen4.SetActive(false);
+        part1_2.gameObject.SetActive(false);
+        part1_3.gameObject.SetActive(false);
+
 
         player1movedrb = player1.GetComponent<Rigidbody>();
         player2movedrb = player2.GetComponent<Rigidbody>();
@@ -92,6 +98,7 @@ public class TutorialSceneManager : MonoBehaviour
         SoundManager.Instance.Play(buttonClick);
         tutorialScreen.SetActive(true);
         tutorialImage.SetActive(false);
+        part1_2.gameObject.SetActive(true);
     }
 
     public void NextPhase2()
@@ -385,12 +392,17 @@ public class TutorialSceneManager : MonoBehaviour
         tutorialScreen.SetActive(true);
         _3players1.SetActive(true);
         _3players2.SetActive(false);
+        allButtons.SetActive(true);
+        part1_3.gameObject.SetActive(true);
     }
 
     public void ThreePlayers2()
     {
         _3players1.SetActive(false);
         _3players2.SetActive(true);
+        allButtons.SetActive(true);
+        part1_2.gameObject.SetActive(true);
+
     }
 
     public void TwoPlayers1()
