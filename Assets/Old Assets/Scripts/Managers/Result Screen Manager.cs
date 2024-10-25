@@ -49,25 +49,43 @@ public class ResultScreenManager : MonoBehaviour
 
     [SerializeField] GameObject result1, result2, tieTextObj;
 
+    
+    [SerializeField] Image[] player1ScoreImages;
+    [SerializeField] Image[] player2ScoreImages;
+    [SerializeField] Image[] player3ScoreImages;
+
+    [SerializeField] Image[] player1ScoreImages2;
+    [SerializeField] Image[] player2ScoreImages2;
+    [SerializeField] Image[] player3ScoreImages2;
+
+    [SerializeField] Image[] player1ScoreImages3;
+    [SerializeField] Image[] player2ScoreImages3;
+    [SerializeField] Image[] player3ScoreImages3;
+
+    [SerializeField] Image[] player1ScoreImages4;
+    [SerializeField] Image[] player2ScoreImages4;
+    [SerializeField] Image[] player3ScoreImages4;
+
 
     private void Start()
     {
+        DisableAllTankImages();
+
         if (ScoreManager.Instance.roundCount == 3 && ScoreManager.Instance.isTieBreaker)
         {
             tieTextObj.SetActive(true);
         }
-        
+
         if (ScoreManager.Instance.roundCount != 3)
         {
             tieTextObj.SetActive(false);
-
         }
 
         if (SoundManager.Instance != null)
         {
             SoundManager.Instance.Play(ResultSound);
-
         }
+
         currentLevel = ScoreManager.Instance.lastLevel;
 
         Time.timeScale = 1f;
@@ -106,6 +124,7 @@ public class ResultScreenManager : MonoBehaviour
             }
         }
     }
+
 
     public void GoToMainMenu()
     {
@@ -195,6 +214,7 @@ public class ResultScreenManager : MonoBehaviour
         scoreManager.roundCount = 1;
         ResetScores();
         SceneManager.LoadSceneAsync(0);
+        Debug.Log("Buttonm");
     }
 
     private void ResetScores()
@@ -206,18 +226,27 @@ public class ResultScreenManager : MonoBehaviour
             scoresRound2[i].text = "0";
             scoresRound3[i].text = "0";
             scoresRound4[i].text = "0";
+
+            SetTankImages1(i, 0); // Hide all tanks for each player
+            SetTankImages2(i, 0); // Hide all tanks for each player
+            SetTankImages3(i, 0); // Hide all tanks for each player
+            SetTankImages4(i, 0); // Hide all tanks for each player
+
         }
 
         scoreManager.ResetScores();
     }
+
 
     private void InitializeScoreRound1()
     {
         for (int i = 0; i < scoresRound1.Length; i++)
         {
             scoresRound1[i].text = scoresRound1Manager[i].ToString();
+            SetTankImages1(i, scoresRound1Manager[i]); // Set tank images based on score
         }
     }
+
 
     private void InitializeScoreRound2()
     {
@@ -225,6 +254,7 @@ public class ResultScreenManager : MonoBehaviour
         for (int i = 0; i < scoresRound2.Length; i++)
         {
             scoresRound2[i].text = scoresRound2Manager[i].ToString();
+            SetTankImages2(i, scoresRound2Manager[i]); // Set tank images based on score
         }
     }
 
@@ -234,6 +264,7 @@ public class ResultScreenManager : MonoBehaviour
         for (int i = 0; i < scoresRound3.Length; i++)
         {
             scoresRound3[i].text = scoresRound3Manager[i].ToString();
+            SetTankImages3(i, scoresRound3Manager[i]); // Set tank images based on score
         }
     }
 
@@ -243,8 +274,10 @@ public class ResultScreenManager : MonoBehaviour
         for (int i = 0; i < scoresRound4.Length; i++)
         {
             scoresRound4[i].text = scoresRound4Manager[i].ToString();
+            SetTankImages4(i, scoresRound4Manager[i]); // Set tank images based on score
         }
     }
+
 
     private void CountTotal()
     {
@@ -315,4 +348,173 @@ public class ResultScreenManager : MonoBehaviour
         thirdPlayer2.SetActive(false);
         thirdPlayer3.SetActive(false);
     }
+
+    private void SetTankImages1(int playerIndex, int score)
+    {
+        // Get the correct array of images for the player
+        Image[] scoreImages = playerIndex switch
+        {
+            0 => player1ScoreImages,
+            1 => player2ScoreImages,
+            2 => player3ScoreImages,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        // Update the image visibility based on the player's score
+        for (int i = 0; i < scoreImages.Length; i++)
+        {
+            if (i < score)
+            {
+                scoreImages[i].enabled = true; // Show the tank
+            }
+            else
+            {
+                scoreImages[i].enabled = false; // Hide the tank
+            }
+        }
+    }
+
+    private void SetTankImages2(int playerIndex, int score)
+    {
+        // Get the correct array of images for the player
+        Image[] scoreImages = playerIndex switch
+        {
+            0 => player1ScoreImages2,
+            1 => player2ScoreImages2,
+            2 => player3ScoreImages2,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        // Update the image visibility based on the player's score
+        for (int i = 0; i < scoreImages.Length; i++)
+        {
+            if (i < score)
+            {
+                scoreImages[i].enabled = true; // Show the tank
+            }
+            else
+            {
+                scoreImages[i].enabled = false; // Hide the tank
+            }
+        }
+    }
+
+    private void SetTankImages3(int playerIndex, int score)
+    {
+        // Get the correct array of images for the player
+        Image[] scoreImages = playerIndex switch
+        {
+            0 => player1ScoreImages3,
+            1 => player2ScoreImages3,
+            2 => player3ScoreImages3,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        // Update the image visibility based on the player's score
+        for (int i = 0; i < scoreImages.Length; i++)
+        {
+            if (i < score)
+            {
+                scoreImages[i].enabled = true; // Show the tank
+            }
+            else
+            {
+                scoreImages[i].enabled = false; // Hide the tank
+            }
+        }
+    }
+
+    private void SetTankImages4(int playerIndex, int score)
+    {
+        // Get the correct array of images for the player
+        Image[] scoreImages = playerIndex switch
+        {
+            0 => player1ScoreImages4,
+            1 => player2ScoreImages4,
+            2 => player3ScoreImages4,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+        // Update the image visibility based on the player's score
+        for (int i = 0; i < scoreImages.Length; i++)
+        {
+            if (i < score)
+            {
+                scoreImages[i].enabled = true; // Show the tank
+            }
+            else
+            {
+                scoreImages[i].enabled = false; // Hide the tank
+            }
+        }
+    }
+
+    private void DisableAllTankImages()
+    {  
+        foreach (var image in player1ScoreImages)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player2ScoreImages)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player3ScoreImages)
+        {
+            image.enabled = false;
+        }
+
+
+        foreach (var image in player1ScoreImages2)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player2ScoreImages2)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player3ScoreImages2)
+        {
+            image.enabled = false;
+        }
+
+
+
+        foreach (var image in player1ScoreImages3)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player2ScoreImages3)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player3ScoreImages3)
+        {
+            image.enabled = false;
+        }
+
+
+
+        foreach (var image in player1ScoreImages4)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player2ScoreImages4)
+        {
+            image.enabled = false;
+        }
+
+        foreach (var image in player3ScoreImages4)
+        {
+            image.enabled = false;
+        }
+    }
+
 }

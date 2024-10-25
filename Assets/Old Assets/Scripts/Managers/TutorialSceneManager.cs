@@ -98,7 +98,7 @@ public class TutorialSceneManager : MonoBehaviour
         SoundManager.Instance.Play(buttonClick);
         tutorialScreen.SetActive(true);
         tutorialImage.SetActive(false);
-        part1_2.gameObject.SetActive(true);
+        //part1_2.gameObject.SetActive(true);
     }
 
     public void NextPhase2()
