@@ -23247,10 +23247,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Selection
       objectReference: {fileID: 0}
-    - target: {fileID: 2027648320567347223, guid: 501664b69784a2941a7e090bbde0aa2e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2191030272852823221, guid: 501664b69784a2941a7e090bbde0aa2e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -33902,7 +33898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5828027953152734113, guid: 70f6ac008a0dd244d868ee2e60f14ab1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5863283400399347245, guid: 70f6ac008a0dd244d868ee2e60f14ab1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -34214,7 +34210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981996138709800159, guid: 70f6ac008a0dd244d868ee2e60f14ab1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9188722320472043983, guid: 70f6ac008a0dd244d868ee2e60f14ab1, type: 3}
       propertyPath: m_Name
