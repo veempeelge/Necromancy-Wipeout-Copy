@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
         //hpBar2.position = new Vector3(1648.833f, hpBar2.position.y, hpBar2.position.z);
         //item2.position = new Vector3(1591.637f, item2.position.y, item2.position.z);
         gameStart = false;
+        Debug.Log("2players");
     }
 
     void _3Players()
@@ -154,6 +155,7 @@ public class GameManager : MonoBehaviour
         StartGame();
 
         gameStart = false;
+        Debug.Log("3players");
 
     }
 

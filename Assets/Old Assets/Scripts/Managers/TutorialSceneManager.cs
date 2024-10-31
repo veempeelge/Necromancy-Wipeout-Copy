@@ -41,11 +41,12 @@ public class TutorialSceneManager : MonoBehaviour
 
     [SerializeField] GameObject _3players1, _3players2, _2players1, _2players2, _3players, _2players;
     [SerializeField] GameObject _phase3_2, _phase3_1, textPhase3;
-    [SerializeField] Button part1_2, part1_3;
+    [SerializeField] Button part1_2, part1_3, part_2, part_31, part32;
     [SerializeField] GameObject allButtons;
 
     private bool haventgolevel = true;
     private bool phase2paused = false;
+    private bool button31 = false;
     [SerializeField] AudioClip buttonSound;
 
     int timer = 15;
@@ -55,6 +56,7 @@ public class TutorialSceneManager : MonoBehaviour
 
     public GameObject skipButton;
 
+    //public GameObject button1, button2, button3, button4;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +70,9 @@ public class TutorialSceneManager : MonoBehaviour
         tutorialScreen4.SetActive(false);
         part1_2.gameObject.SetActive(false);
         part1_3.gameObject.SetActive(false);
+        part_2.gameObject.SetActive(false);
+        part_31.gameObject.SetActive(false);
+        part32.gameObject.SetActive(false);
 
 
         player1movedrb = player1.GetComponent<Rigidbody>();
@@ -78,6 +83,10 @@ public class TutorialSceneManager : MonoBehaviour
         player2Code = player2.GetComponent<MovementPlayer1>();
         player3Code = player3.GetComponent<MovementPlayer1>();
 
+        //button1.SetActive(false);
+        //button2.SetActive(false);
+        //button3.SetActive(false);   
+        //button4.SetActive(false);
 
     }
     private void Awake()
@@ -91,6 +100,7 @@ public class TutorialSceneManager : MonoBehaviour
         SoundManager.Instance.Play(buttonClick);
 
         tutorialScreen.SetActive(true);
+        //button1.SetActive(true);
     }
 
     public void Next()
@@ -104,6 +114,8 @@ public class TutorialSceneManager : MonoBehaviour
     public void NextPhase2()
     {
         SoundManager.Instance.Play(buttonClick);
+        part_2.gameObject.SetActive(false);
+       
 
         tutorialScreen2Image.SetActive(false);
         Time.timeScale = 1;
@@ -112,6 +124,8 @@ public class TutorialSceneManager : MonoBehaviour
     public void NextPhase31()
     {
         SoundManager.Instance.Play(buttonClick);
+        part_31.gameObject.SetActive(false);
+        part32.gameObject.SetActive(true);
 
         _phase3_1.SetActive(false);
         _phase3_2.SetActive(true);
@@ -126,6 +140,9 @@ public class TutorialSceneManager : MonoBehaviour
         _phase3_1.SetActive(false);
         _phase3_2.SetActive(false);
         textPhase3.SetActive(true);
+        part_31.gameObject.SetActive(false);
+
+        part32.gameObject.SetActive(false);
 
         Time.timeScale = 1;
         tutorialScreen3Image.SetActive(false);
@@ -181,10 +198,17 @@ public class TutorialSceneManager : MonoBehaviour
         if (phase2)
         {
             Invoke(nameof(CheckWater),3f);
+
         }
 
         if (phase3)
         {
+            if (button31 == false)
+            {
+                part_31.gameObject.SetActive(true);
+                button31 = true;
+            }
+
             Invoke(nameof(WaterCheck),1f);
         }
 
@@ -236,7 +260,8 @@ public class TutorialSceneManager : MonoBehaviour
     public void NextPhase3()
     {
         Time.timeScale = 1;
-        tutorialScreen3Image.SetActive(false) ;
+        tutorialScreen3Image.SetActive(false);
+
     }
     private void WaterCheck()
     {
@@ -267,7 +292,7 @@ public class TutorialSceneManager : MonoBehaviour
             tutorialScreen2.SetActive(true);
             tutorialScreen3.SetActive(false);
             tutorialScreen4.SetActive(false);
-
+            part_2.gameObject.SetActive(true);
            
             phase2 = true;
             if (!phase2paused)
@@ -401,7 +426,8 @@ public class TutorialSceneManager : MonoBehaviour
         _3players1.SetActive(false);
         _3players2.SetActive(true);
         allButtons.SetActive(true);
-        part1_2.gameObject.SetActive(true);
+        part1_3.gameObject.SetActive(false);
+       
 
     }
 
@@ -411,12 +437,18 @@ public class TutorialSceneManager : MonoBehaviour
         tutorialScreen.SetActive(true);
         _2players1.SetActive(true);
         _2players2.SetActive(false);
+        allButtons.SetActive(true);
+
+        part1_2.gameObject.SetActive(true);
     }
 
     public void TwoPlayers2()
     {
         _2players1.SetActive(false);
         _2players2.SetActive(true);
+        allButtons.SetActive(true);
+        part1_2.gameObject.SetActive(false);
+
     }
 }
 

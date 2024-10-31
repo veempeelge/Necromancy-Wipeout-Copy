@@ -646,7 +646,7 @@ MonoBehaviour:
   cameras: {fileID: 2315647474313539879}
   deadBodyObject: {fileID: 1197664981355331433, guid: faf6b0f076d35424889658e7f7e30db2, type: 3}
   tutorialUI: {fileID: 1403278322959310791}
-  arrows: {fileID: 21300000, guid: ac34a9bb5bfa82046920a489606db7f8, type: 3}
+  arrows: {fileID: 21300000, guid: fe1bd20703966a447add71aa5ccdde36, type: 3}
   ijkl: {fileID: 21300000, guid: 29635dd03fc14374d9d813b1aefe281c, type: 3}
   hitWater: {fileID: 8300000, guid: 98c61cbf6b60bcf409e163f0225b8e6a, type: 3}
   walking: {fileID: 4625116319028376643}
@@ -926,7 +926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2981100251235679161
 Transform:
   m_ObjectHideFlags: 0
@@ -936,7 +936,7 @@ Transform:
   m_GameObject: {fileID: 2020042861271335704}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.353114, z: 0}
+  m_LocalPosition: {x: 0, y: 3.46, z: 0}
   m_LocalScale: {x: 0.39, y: 0.38992, z: 0.39}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -983,7 +983,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 29635dd03fc14374d9d813b1aefe281c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fe1bd20703966a447add71aa5ccdde36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1398,7 +1398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &465849025882616581
 Transform:
   m_ObjectHideFlags: 0
